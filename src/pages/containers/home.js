@@ -44,8 +44,12 @@ class Home extends Component {
     }
 }
 function mapSateToProps(state,props){
+    const categories=state.data.categories.map((catId)=>{
+        return state.data.entities.categories[catId];
+    });
+
     return{
-        categories:state.data.categories,
+        categories:categories,
         search:state.search
     }
 }

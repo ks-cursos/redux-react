@@ -1,5 +1,5 @@
 import React from "react";
-import Media from './media';
+import MediaComponent from '../container/mediaComponent';
 import "./playlist.css";
 import PLay from "../../icons/components/play"
 import Pause from "../../icons/components/pause"
@@ -11,8 +11,8 @@ function PLayList(props) {
         <div key={props.id} className="Playlist">
             {
                 props.playlist.map(
-                    (item) => {
-                        return <Media key={item.id} {...item}  openMOdal={props.handleOpenModal}/>
+                    (mediaId) => {
+                        return <MediaComponent key={mediaId} id={mediaId}  openMOdal={props.handleOpenModal}/>
                     }
                 )
             }

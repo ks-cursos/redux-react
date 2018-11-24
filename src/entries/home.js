@@ -13,7 +13,11 @@ const initialState = {
         entities:data.entities,
         categories:data.result.categories
     },
-    search:[]
+    search:[],
+    modal:{
+        visibility:false,
+        
+    }
 }
 const store = createStore(
     reducer,

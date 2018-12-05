@@ -5,7 +5,7 @@ import Home from "../pages/containers/home"
 import { createStore } from 'redux';
 import data from "../schemas/index.js"
 import { Provider } from "react-redux";
-import reducer from "../reducer/data";
+import reducer from "../reducer/index";
 console.log(data)
 const initialState = {
     data: {
@@ -16,7 +16,7 @@ const initialState = {
     search:[],
     modal:{
         visibility:false,
-        
+        mediaId:null,
     }
 }
 const store = createStore(
